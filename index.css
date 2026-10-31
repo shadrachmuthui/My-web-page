@@ -1,0 +1,281 @@
+body{
+        background-color:
+            #16181d;
+        text-align: center;
+        line-height: normal;
+        border-radius: 20px;
+        justify-content: center;
+        display: block;
+        color: #00aaff;
+    }
+    
+    input{
+        width: 100%;
+        border-radius: 10px;
+        margin: 15px;
+        padding:10px;
+        box-sizing: border-box;
+    }
+    .login-form button{
+        display: flex;
+        border-radius: 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 200px;
+        height: 50px;
+        max-width: 100%;
+        margin: auto;
+    }
+    button{
+        background-color: #1f222a;
+        color: #00aaff; 
+        padding: 20px;
+        font-size: larger;
+        width: 100%;
+        cursor: pointer;
+    }
+    label{
+        display: block;
+    }
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    display: inline-block;
+    color: #00aaff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #00aaff;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 8px 12px;
+        text-align: left;
+    }
+}
+    nav a:hover{
+        background-color: #00aaff;
+        color: black;
+    }
+    section{
+        background-color: #1f222a;
+        padding: 30px;
+        gap: 10px;
+        margin: 0px 20px;
+        border-bottom: 5px  solid white;
+        border-right: 3px solid white;
+        border-radius: 20px;
+    }
+
+    #Services{
+        padding: 40px;
+        text-align: center;
+        border-radius: 20px;
+    }
+    #About {
+        padding: 40px;
+        text-align: center;
+        border-radius: 20px;
+    }
+    #Project{
+        padding: 40px;
+        text-align: center;
+        border-radius: 20px;
+    }
+    #Contact{
+        padding: 20px;
+        text-align: center;
+        border-radius: 20px;
+    }
+    .about-container{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: left;
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
+    .project-container{
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        justify-content: left;
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
+    img{
+        width: 150px;
+        height: 150px;
+        border-radius: 50px;
+        display: block;
+    }
+        #Home{
+        padding: 40-px 8%;
+        align-items: flex-start;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        min-height: 350px;
+        box-sizing: border-box;
+        border-radius: 15px;
+    }
+    #Home img{
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 20px;
+        margin-bottom: 15px;
+    }
+    #Home{
+        animation: fadeIn 1.2s ease-in-out;
+    }
+    @keyframes fadeIn{
+        from{
+            opacity: 0;
+            transform: translateY(25px);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    #Home img{
+        transition: transform 0.4s ease;
+    }
+    #Home img:hover{
+        transform: scale(1.08);
+    }
+    @keyframes homeReact{
+        0%{
+            background-color: transparent;
+        }
+        50%{
+            background-color: #e6dcff;
+        }
+        100%{
+            background-color: transparent;
+        }
+    }
+    #Home.home-active{
+        animation: 0.8s ease;
+    }
+    html{
+        scroll-behavior: smooth;
+    }
+    .menu-toggle{
+        background-color: none;
+        display: inline-block;
+        color: #00aaff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 40px;
+        transition: 0.3s;
+        width: 100%;
+    }
+
+    /*improve cards o phone screens*/
+    @media (max-width: 600px){
+        section{
+            width: 90%;
+            margin: 20px auto;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+        section h1,
+        section h2{
+            font-size: 26px;
+        }
+        section p{
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        section img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    /*navigation left, content right on all devices*/
+    body{
+        display: grid;
+        grid-template-columns: 200px minmax(0, 1fr);
+        align-items: start;
+        gap: 20px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    /*navigation stays on the left*/
+    body > nav{
+        grid-column: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+        padding: 15px;
+    }
+    /*page sections stay on the right*/
+    body >section{
+        grid-column: 2;
+        width: 100%;
+        min-width: 0;
+        margin: 0 0 20px;
+        box-sizing: border-box;
+    }
+
+    /*adapt the layout to smaller screens */
+    @media (max-width: 600px) {
+        body{
+            grid-template-columns: 90px minmax(0, 1fr);
+            gap: 10px;
+            padding: 8px;
+        }
+        body > nav{
+            padding: 6px 0;
+            gap: 8px;
+        }
+        body > nav a{
+            font-size: 12px;
+            padding: 8px 2px;
+            overflow-wrap:anywhere ;
+        }
+        body > section{
+            padding: 12px;
+        }
+    }
+    .nav-links {
+    display: none;
+}
+
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+}
